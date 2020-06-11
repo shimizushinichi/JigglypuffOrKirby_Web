@@ -18,7 +18,6 @@ function mam_draw_init(){
   ct.lineWidth=5;
   ct.lineJoin="round";
   ct.lineCap="round";
-  clearCan();
 }
 function onDown(event){
   mf=true;
@@ -69,6 +68,11 @@ function clearCan(){
   // 画像アップロード時はサイズも変わるので、ここで400,400に戻す処理を追加
   can.setAttribute("width",400);
   can.setAttribute("height",400);
+  // サイズを400,400に戻す際に線の太さがデフォルトになってしまうため、再度設定
+  ct.strokeStyle="#000000";
+  ct.lineWidth=5;
+  ct.lineJoin="round";
+  ct.lineCap="round";
   ct.fillStyle="rgb(255,255,255)";
   ct.fillRect(0,0,can.getBoundingClientRect().width,can.getBoundingClientRect().height);
 }
