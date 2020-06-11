@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JigglypuffOrKirby</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="desctiption" content="就活用に作られたプリンとカービィを見分けるサイトです">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+
+  <body onload="mam_draw_init();">
+    <header>
+        <div class="info">
+            <h1>プリン？カービィ？</h1>
+            <p>描いた絵がプリンっぽいか、カービィっぽいかを評価します。</p>
+        </div>
+    </header>
+
+    <div class="main">
+        <section>
+            <ul>
+                <li>
+                    <img src="img/j.png" height=215>
+                </li>
+                <li>
+                    <img src="img/k.png" height=215>
+                </li>
+            </ul>
+        </section>
+
+        <section class="canvas">
+            <canvas id="draw-area"
+            width=400
+            height=400
+            style="border: 1px solid #000000;"></canvas>
+            <div class="button_wrapper">
+                <button id="clearButton" onClick="clearCan();">clear</button>
+                <button id="judgeButton">judge</button>
+            </div>
+            <input id="imageuploader" type="file" accept="image/*">
+        </section>
+
+        <section id="result">
+            <h1 class="result"></h1>
+        </section>
+        <div class="loading hide"></div>
+    </div>
+  </body>
+</html>
