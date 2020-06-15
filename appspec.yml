@@ -14,7 +14,7 @@ files:
   - source: favicon.ico
     destination: /var/www/html
 permissions:
-  - opject: /var/www/cgi-bin/
+  - object: /var/www/cgi-bin/
     pattern: "**"
     owner: ec2-user
     group: ec2-user
