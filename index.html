@@ -31,15 +31,17 @@
         </section>
 
         <section class="canvas">
+            <div class="button_wrapper">
+                <button id="clearButton" onClick="clearCan();">やり直す(Reset)</button>
+            </div>
             <canvas id="draw-area"
             width=400
             height=400
             style="border: 1px solid #000000;"></canvas>
-            <div class="button_wrapper">
-                <button id="clearButton" onClick="clearCan();">clear</button>
-                <button id="judgeButton">judge</button>
-            </div>
             <input id="imageuploader" type="file" accept="image/*">
+            <div class="button_wrapper">
+                <button id="judgeButton">判定する(Judge)</button>
+            </div>
         </section>
 
         <section id="result">

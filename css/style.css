@@ -36,7 +36,7 @@ header {
     padding-left: 160px;
     padding-right: 160px;
     padding-top: 7px;
-    padding-bottom: 7;
+    padding-bottom: 7px;
 }
 
 .main section {
@@ -55,13 +55,28 @@ header {
 
 .button_wrapper {
     text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
-button {
-    width: 100px;
+#clearButton {
+    width: 200px;
+    height: 40px;
+    font-size: 1.2em;
+    /*font-weight: bold;*/
+    color: white;
+    background-color: #cfcfcf;
+    border-style: none;
+}
+
+#judgeButton{
+    width: 300px;
     height: 60px;
     font-size: 1.4em;
     font-weight: bold;
+    color: white;
+    background-color: #fc944c;
+    border-style: none;
 }
 
 .canvas {
@@ -94,8 +109,8 @@ button {
 }
 
 #imageuploader {
-    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
-    border: solid;
+    border: groove;
 }
 
