@@ -20,6 +20,6 @@ permissions:
     group: ec2-user
 hooks:
   AfterInstall:
-    - location: /home/ec2-user/apache_reload.sh
+    - location: apache_reload.sh
       timeout: 15
       runas: root
