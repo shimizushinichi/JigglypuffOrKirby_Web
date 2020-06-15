@@ -18,3 +18,8 @@ permissions:
     pattern: "**"
     owner: ec2-user
     group: ec2-user
+hooks:
+  AfterInstall:
+    - location: /home/ec2-user/apache_reload.sh
+      timeout: 15
+      runas: root
