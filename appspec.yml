@@ -2,15 +2,15 @@ version: 0.0
 os: linux
 files:
   - source: cgi-bin
-    destination: /var/www
+    destination: /var/www/cgi-bin
   - source: index.html
     destination: /var/www/html
   - source: css
-    destination: /var/www/html
+    destination: /var/www/html/css
   - source: img
-    destination: /var/www/html
+    destination: /var/www/html/img
   - source: js
-    destination: /var/www/html
+    destination: /var/www/html/js
   - source: favicon.ico
     destination: /var/www/html
 permissions:
