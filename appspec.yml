@@ -18,6 +18,7 @@ permissions:
     pattern: "**"
     owner: ec2-user
     group: ec2-user
+    mode: 755
 hooks:
   AfterInstall:
     - location: apache_reload.sh
