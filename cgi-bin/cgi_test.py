@@ -16,14 +16,12 @@ cgitb.enable()
 def judge(input_img, input_model):
     model = models.load_model(input_model)
 
-    # img = image.load_img(input_img, target_size=(224,224,3))
     img = input_img.resize((224,224), Image.LANCZOS)
     img_data = image.img_to_array(img)
     img_data = np.expand_dims(img_data, axis=0)
 
     features = model.predict_proba(img_data)
 
-    #category_list.txtからカテゴリの一覧を取得する
     category_list = ["プリン", "カービィ"]
 
     #featuresの中で最も確率が高い番号を取得して、その番号に当てはまるカテゴリを出力する
@@ -46,7 +44,6 @@ value = value.replace("data:image/jpeg;base64,", "")
 # https://ja.coder.work/so/python/111221
 img = Image.open(BytesIO(base64.b64decode(value)))
 
-# 本番環境ではパスを変更
-return_data = judge(img, "/Users/shimizushinichi/JigglypuffOrKirby/judge/model_jigglypufforkirby_forJudge.h5")
+return_data = judge(img, "/var/www/cgi-bin/model/model_jigglypufforkirby_forJudge.h5")
 
 print("あなたの描いた絵は{}っぽいです。".format(return_data[0]))
