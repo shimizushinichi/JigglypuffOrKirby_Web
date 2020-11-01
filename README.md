@@ -1,8 +1,8 @@
 # JigglypuffOrKirby_Web
 
 ## デモサイト
-http://jigglypufforkirby.net/  
-  
+~~http://jigglypufforkirby.net/~~  
+AWS無料期間が終わったので停止中  
   
 ## 概要
 
